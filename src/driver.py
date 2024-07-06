@@ -1,4 +1,5 @@
 from users import Librarian, Member
+from menu import login_menu()
 
 
 # lib = Librarian("Talha", "Khan", "kasjdf", 123, '')
@@ -22,12 +23,27 @@ not_quit = True
 
 while not_quit:
     
+    
+    
     # STRUCTURING AN INFINITE MENU FOR TRANSACTIONS
     print("----------------------------------------")
     print("   WELCOME TO LIBRARY MANAGEMENT APP")
     print("----------------------------------------")
+    print()
+    print("=: Choose one of the following:")
+    print("1. Login")
+    print("2. Signup")
+    print("3. Exit")
     
+    reg_choice = int(input("=> "))
     
+    if reg_choice == 1:
+        login_menu()
+        first = input("Enter you first name\n=> ")
+        last = input("Enter you last name\n=> ")
+        phone = int(input("Enter you phone number\n=> "))
+        password = input("Enter you password\n=> ")
+        
     
 
 
