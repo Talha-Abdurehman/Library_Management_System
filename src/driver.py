@@ -1,5 +1,6 @@
 from users import Librarian, Member
-from menu import login_menu()
+from menu import signup_menu, login_menu
+from login import LRegister
 
 
 # lib = Librarian("Talha", "Khan", "kasjdf", 123, '')
@@ -23,8 +24,6 @@ not_quit = True
 
 while not_quit:
     
-    
-    
     # STRUCTURING AN INFINITE MENU FOR TRANSACTIONS
     print("----------------------------------------")
     print("   WELCOME TO LIBRARY MANAGEMENT APP")
@@ -43,6 +42,26 @@ while not_quit:
         last = input("Enter you last name\n=> ")
         phone = int(input("Enter you phone number\n=> "))
         password = input("Enter you password\n=> ")
+        LRegister.login(first, last, phone, password)
+        print("You have logged in successfully!")
+        
+    
+    
+    elif reg_choice == 2:
+        signup_menu()
+        first = input("Enter you first name\n=> ")
+        last = input("Enter you last name\n=> ")
+        phone = int(input("Enter you phone number\n=> "))
+        password = input("Enter you password\n=> ")
+        LRegister.signup(first, last, phone, password)
+        print("You have signed up successfully!")
+        print("Now login to your account")
+        
+    else:
+        exit()
+        
+        
+        
         
     
 

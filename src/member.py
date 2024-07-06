@@ -1,4 +1,5 @@
 from users import _User
+from library import Library
 class Member(_User):
     
     loaned_books = []
@@ -8,3 +9,4 @@ class Member(_User):
         self.loaned_books.append(borrowed_book)
     
     def return_book(self, book_no:int):
+        pass
