@@ -20,10 +20,10 @@ class LRegister:
         cursor.execute(f"SELECT * FROM librarian WHERE first_name = '{first}' AND last_name = '{last}' AND phone = '{phone}' AND password = '{password}' ")
         data = cursor.fetchone()
         
-        if data[0] == first \
-            and data[1] == last \
-                and data[2] == last \
-                    and data[3] == last:
+        if first in data \
+            and last in data \
+                and phone in data\
+                    and password in data:
                         print("Your credentials Match! You can successfully Login")
         else:
             print("Account Not found!")
