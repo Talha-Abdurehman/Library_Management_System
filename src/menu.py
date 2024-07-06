@@ -1,6 +1,7 @@
 from os import system
 
 
+
 def signup_menu():
     system('cls')
     print("----------------------------------------")
@@ -9,6 +10,8 @@ def signup_menu():
     print()
     print("=: Enter your details:")
 
+    
+
 def login_menu():
     system('cls')
     print("----------------------------------------")
@@ -16,5 +19,6 @@ def login_menu():
     print("----------------------------------------")
     print()
     print("=: Enter your details:")
-    
-    
+
+if __name__ == "__main__":
+    pass 

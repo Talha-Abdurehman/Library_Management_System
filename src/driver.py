@@ -3,6 +3,7 @@ from menu import signup_menu, login_menu
 from login import LRegister
 
 
+
 # lib = Librarian("Talha", "Khan", "kasjdf", 123, '')
 # lib.addBook("R.R Martin","Game of throne")
 # lib.addBook("Erwin Schrodinger", "Game of Bones")
@@ -39,24 +40,22 @@ while not_quit:
     if reg_choice == 1:
         login_menu()
         first = input("Enter you first name\n=> ")
-        last = input("Enter you last name\n=> ")
+        last = input("Enter you last name\n=> ").strip()
         phone = int(input("Enter you phone number\n=> "))
-        password = input("Enter you password\n=> ")
+        password = input("Enter you password\n=> ").strip()
         LRegister.login(first, last, phone, password)
-        print("You have logged in successfully!")
-        
-    
-    
+        print("Logged In successfully")
+  
     elif reg_choice == 2:
         signup_menu()
         first = input("Enter you first name\n=> ")
-        last = input("Enter you last name\n=> ")
+        last = input("Enter you last name\n=> ").capitalize().strip()
         phone = int(input("Enter you phone number\n=> "))
-        password = input("Enter you password\n=> ")
+        password = input("Enter you password\n=> ").strip()
         LRegister.signup(first, last, phone, password)
         print("You have signed up successfully!")
         print("Now login to your account")
-        
+       
     else:
         exit()
         
