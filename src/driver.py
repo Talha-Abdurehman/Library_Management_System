@@ -1,6 +1,6 @@
 from users import Librarian, Member
-from menu import signup_menu, login_menu
-from login import LRegister
+from menu import l_login_menu, l_signup_menu, m_login_menu, m_signup_menu
+
 
 
 
@@ -31,33 +31,59 @@ while not_quit:
     print("----------------------------------------")
     print()
     print("=: Choose one of the following:")
-    print("1. Login")
-    print("2. Signup")
+    print("1. Librarian")
+    print("2. Member")
     print("3. Exit")
     
-    reg_choice = int(input("=> "))
+    first_choice = int(input("=> "))
     
-    if reg_choice == 1:
-        login_menu()
-        first = input("Enter you first name\n=> ")
-        last = input("Enter you last name\n=> ").strip()
-        phone = int(input("Enter you phone number\n=> "))
-        password = input("Enter you password\n=> ").strip()
-        LRegister.login(first, last, phone, password)
-        print("Logged In successfully")
-  
-    elif reg_choice == 2:
-        signup_menu()
-        first = input("Enter you first name\n=> ")
-        last = input("Enter you last name\n=> ").capitalize().strip()
-        phone = int(input("Enter you phone number\n=> "))
-        password = input("Enter you password\n=> ").strip()
-        LRegister.signup(first, last, phone, password)
-        print("You have signed up successfully!")
-        print("Now login to your account")
-       
+    if first_choice == 1:
+        print("----------------------------------------")
+        print("                 HELLO                  ")
+        print("----------------------------------------")
+        print()
+        print("=: Choose one of the following:")
+        print("1. Login")
+        print("2. Sign Up")
+        print("3. Exit")
+        
+        l_choice = int(input("=> "))
+        
+        if l_choice == 1:
+            l_login_menu()
+        
+        elif l_choice == 2:
+            l_signup_menu()
+        
+        else:
+            exit()
+        
+        
+    if first_choice == 2:
+        print("----------------------------------------")
+        print("                 HELLO                  ")
+        print("----------------------------------------")
+        print()
+        print("=: Choose one of the following:")
+        print("1. Login")
+        print("2. Sign Up")
+        print("3. Exit")
+        
+        m_choice = int(input("=> "))
+            
+        if m_choice == 1:
+            m_login_menu()
+        
+        elif m_choice == 2:
+            m_signup_menu()
+        
+        else:
+            exit()
+        
+        
     else:
         exit()
+            
         
         
         
