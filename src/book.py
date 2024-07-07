@@ -1,3 +1,5 @@
+import sqlite3
+
 class Book:
     
     def __init__(self, author:str, title:str):
@@ -15,6 +17,5 @@ class Book:
         print(f"Author: {self.author}")
         print(f"   title: {self.title}")
         print()
-    
     
     
