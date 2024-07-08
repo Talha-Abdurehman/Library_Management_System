@@ -49,7 +49,12 @@ def btn_func():
 # ==================================== SIGN UP FUNCTION ========================================
  
     
-
+def signup_btn():
+    
+    signup_form(l1)
+       
+    
+    
 
 
         
@@ -116,7 +121,8 @@ button2 = customtkinter.CTkButton(master=frame, width=80, height=20, text="Sign 
                                   hover_color="#02367B",
                                   compound="left",
                                   text_color="black",
-                                  text_color_disabled="white")
+                                  text_color_disabled="white",
+                                  command=signup_btn)
 button2.place(x=50, y=290)
 
 # CONTACT BUTTON
