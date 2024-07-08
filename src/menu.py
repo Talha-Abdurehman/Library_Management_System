@@ -1,5 +1,5 @@
 from os import system
-from login import LRegister
+from db_functions.login import LRegister
 
 
 
@@ -28,10 +28,8 @@ def l_login_menu():
     print()
     print("=: Enter your details:")
     first = input("Enter you first name\n=> ")
-    last = input("Enter you last name\n=> ").strip()
-    phone = int(input("Enter you phone number\n=> "))
     password = input("Enter you password\n=> ").strip()
-    LRegister.login(first, last, phone, password)
+    LRegister.login(first, password)
     print("Logged In successfully")
 
 

@@ -80,9 +80,6 @@ while not_quit:
         else:
             exit()
         
-        
-    else:
-        exit()
             
         
         
