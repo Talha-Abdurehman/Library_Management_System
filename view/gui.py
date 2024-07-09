@@ -1,11 +1,10 @@
 # IMPORTING DIFFERENT LIBRARIES
-import sys
-import os
+import sys, os, tkinter, customtkinter
 from main import *
-import tkinter
-import customtkinter
 from PIL import ImageTk, Image
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
 from db_functions.login import LRegister as lr
 
 # SETTING APPEARANCE FOR THE MAIN APP
@@ -32,6 +31,8 @@ def btn_func():
         new_func()
 
     else: 
+        l2 = customtkinter.CTkLabel(master=frame, text="wrong credentials", text_color="red", font=("Century Gothic",12))
+        l2.place(relx=0.5, rely=0.25, anchor=tkinter.CENTER)
         
         dummy_frame = customtkinter.CTkFrame(master=app)
         dummy_frame.place(x=-10000,y=-10000)
@@ -81,8 +82,11 @@ frame.place(relx=0.5, rely=0.5, anchor = tkinter.CENTER,)
 
 
 # CREATING A LABEL TO WHICH WILL BE OUR TITLE
-l2 = customtkinter.CTkLabel(master=frame, text="Login to your account", font=("Century Gothic",20))
-l2.place(x=50, y=45)
+l2 = customtkinter.CTkLabel(master=frame, text="LOG IN", font=("Century Gothic",20))
+l2.place(relx=0.5, rely=0.15, anchor=tkinter.CENTER)
+
+l3 = customtkinter.CTkLabel(master=frame, text="Made By Talha Abdurehman With ❤️", font=("Century Gothic",10))
+l3.place(relx=0.5, rely=0.95, anchor=tkinter.CENTER)
 
 #======================= CREATING DIFFERENT INSERT FORMS FOR USER TO INSERT INFORMATION INTO
 # FIRST_NAME ENTRY FORM
