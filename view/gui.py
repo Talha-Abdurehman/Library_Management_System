@@ -15,7 +15,7 @@ customtkinter.set_default_color_theme("green")
 
 # INITIALIZING THE APP
 app = customtkinter.CTk()
-app.geometry("600x400")
+app.geometry("1280x768")
 app.title("Library Management System")
 
 
@@ -51,11 +51,15 @@ def btn_func():
  
     
 def signup_btn():
-    
-    signup_form(l1)
+    frame.destroy()
+    signup_form(l1, login_btn)
        
+ 
     
-    
+def login_btn():
+    frame.destroy()
+    login_form(l1, signup_btn, btn_func)
+        
 
 
         
