@@ -14,7 +14,7 @@ def new_func():
 
 
 
-def login_form():
+def login_form(l1, signup_btn, btn_func):
         
         
         # CREATING A LOGIN FRAME
@@ -84,7 +84,7 @@ def login_form():
 
 
 
-def signup_form(l1):
+def signup_form(l1, login_btn):
     
     frame = customtkinter.CTkFrame(master=l1, width=320, height=600, corner_radius=30)
     frame.place(relx=0.5, rely=0.5, anchor = tkinter.CENTER,)
@@ -136,8 +136,7 @@ def signup_form(l1):
                                       text="Signup",
                                       corner_radius=6,  
                                     fg_color="#006CA5",
-                                    hover_color="#02367B",
-                                    
+                                    hover_color="#02367B"
                                     )
     button1.place(x=50, y=350)
 
@@ -152,6 +151,7 @@ def signup_form(l1):
                                     compound="left",
                                     text_color="black",
                                     text_color_disabled="white",
+                                    command=login_btn
                                     )
     button2.place(x=50, y=420)
 
